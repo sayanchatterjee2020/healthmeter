@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="img/plant.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>BMR</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+
+
+
+      <!----------------- navbar start ----------------->
+      <section>
+        <nav class="navbar ">
+            <div class="container-fluid">
+          
+                
+                <a class="navbar-brand" href="#">
+                  <img src="img/plant.png" alt="refresh">
+                </a>
+                <div class="heading">
+                    <h1>health<span style="  color: rgb(35, 161, 145);">Meter</span></h1>
+                  
+                </div>
+                
+            </div>
+        </nav>
+
+    </section>
+
+    <!----------------- navbar end ----------------->
+
+    <!-------------main start ---------------->
+
+    <div class="container">
+        <div class="row d-flex justify-content-center my-5  main-div">
+            <div class="col-12 col-md-8 col-xxl-5">
+                <div class="box py-3 px-2">
+                    <p class="text-center " >Calculate your bmr</p>
+                    <div class="mx-5 my-5">
+
+                    <div class="input">
+                        <input type="text" class="text-center" id="weight"  placeholder="Weight in Kg">
+                        <input type="text" class="text-center" id="height"   placeholder="Height in Ft">
+                        <input type="text" class="text-center" id="year"   placeholder="Year">
+                        <div class="gender mx-auto my-3">
+                           <input type="radio" id="male" name="gender"  > Male</input>
+                           <input type="radio" id="female" name="gender" > Female</input>
+                        </div>
+                       
+                    </div>
+                    <div class="submit">      
+                        <button onclick="getbmr()" >check it</button>
+                    </div>
+
+                    <div class="output ">
+                        <input type="text" class="text-center" id="show" placeholder="Here it is">
+
+                    </div>
+                </div>
+                   
+                </div>
+
+            </div>
+
+        </div>
+        <!-- <div  class="screen ">
+
+            <h2>normal BMI is 19 - 23 :)</h2>
+
+        </div> -->
+
+    </div>
+
+
+
+    <!------ lekha start -------->
+
+    <section id="lekha">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <h1>what is <span style="color: rgb(35, 161, 145);" >bmr</span> ?</h1>
+                    <p>
+                        Basal metabolic rate (BMR) is the rate of energy expenditure per unit time by endothermic animals at rest.It is reported in energy units per unit time ranging from watt (joule/second) to ml O2/min or joule per hour per kg body mass J/(h·kg). Proper measurement requires a strict set of criteria be met. These criteria include being in a physically and psychologically undisturbed state, in a thermally neutral environment, while in the post-absorptive state (i.e., not actively digesting food).In bradymetabolic animals, such as fish and reptiles, the equivalent term standard metabolic rate (SMR) is used. It follows the same criteria as BMR, but requires the documentation of the temperature at which the metabolic rate was measured. This makes BMR a variant of standard metabolic rate measurement that excludes the temperature data, a practice that has led to problems in defining "standard" rates of metabolism for many mammals.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+        <!-- footer start -->
+
+
+        <section id="footer">
+        
+            <div class="container">
+            <div class="row py-auto px-auto my-auto">
+              <div class="col-lg-3 col-md-3 col-6 my-3">
+                <ul>
+                  <p>Terms of use</p>
+                  <p>Privacy & policy</p>
+                  <p>feedback</p>
+                  <p>Report and issue</p>
+                </ul>
+              </div> 
+              <div class="col-lg-3 col-md-3 col-6 my-3">
+                <ul>
+                  <p>Terms of use</p>
+                  <p>Privacy & policy</p>
+                  <p>feedback</p>
+                  <p>Report and issue</p>
+                </ul>
+              </div> 
+              <div class="col-lg-6 col-md-6 col-12 my-3">
+                <p>
+                  healthMeater is part of the Chatterjee's Group . 2021 © Chatterjee's LLC. All rights reserved . The material in this site is intended to be of general informational use.
+                </p>
+               
+              </div>
+            
+  
+            </div>
+            <div class="copyright">
+              <hr class='w-100 text-center' />
+              <p class="text-center" >2021 © Chatterjee's LLC</p>
+  
+            </div>
+          </div>
+  
+          </section>
+  
+  
+  
+          <!-- footer end -->
+
+
+
+    
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<script>
+    function getbmr(){
+
+    var male = document.getElementById("male");
+    var female = document.getElementById("female");
+
+    if(male.checked==true){
+        
+          var weight = document.getElementById("weight").value;
+          var height = document.getElementById("height").value;
+          var year = document.getElementById("year").value;
+
+          var sum = 66.47 + (13.75*weight) + (152.49144*height) - (6.755*year);
+
+          sum = Math.round(sum);
+
+          document.getElementById("show").value = sum + " cal/day" ;
+          
+
+    }else if(female.checked==true){
+  
+        var weight = document.getElementById("weight").value;
+          var height = document.getElementById("height").value;
+          var year = document.getElementById("year").value;
+
+          var sum = 655.1 + (9.563*weight) + (56.388*height) - (4.676*year);
+
+          sum = Math.round(sum);
+
+          document.getElementById("show").value = sum + " cal/day";
+
+    }
+
+     
+    }
+
+ 
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="img/plant.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>BMI</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+
+
+  <section>
+    <nav class="navbar ">
+        <div class="container-fluid">
+      
+            
+            <a class="navbar-brand" href="#">
+              <img src="img/plant.png" alt="refresh">
+            </a>
+            <div class="heading">
+                <h1>health<span style="  color: rgb(35, 161, 145);">Meter</span></h1>
+              
+            </div>
+            
+        </div>
+    </nav>
+
+</section>
+
+    <!-------------main start ---------------->
+
+    <div class="container">
+        <div class="row d-flex justify-content-center my-5  main-div">
+            <div class="col-12 col-md-8 col-xxl-5">
+                <div class="box py-3 px-2">
+                    <p class="text-center " >Calculate your bmi</p>
+                    <div class="mx-5 my-5">
+
+                    <div class="input">
+                        <input type="text" class="text-center" id="weight"  placeholder="Weight in Kg">
+                        <input type="text" class="text-center" id="height"   placeholder="Height in Ft">
+                    </div>
+                    <div class="submit">      
+                        <button onclick="getbmi()" >check it</button>
+                    </div>
+
+                    <div class="output ">
+                        <input type="text" class="text-center" id="show" placeholder="Here it is">
+
+                    </div>
+                </div>
+                   
+                </div>
+
+            </div>
+
+        </div>
+        <div  class="screen ">
+
+            <h2>normal BMI is 19 - 23 :)</h2>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!------ lekha start -------->
+
+    <section id="lekha">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <h1>what is <span style="color: rgb(35, 161, 145);" >bmi</span> ?</h1>
+                    <p>
+                      Body mass index (BMI) is a value derived from the mass (weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m2, resulting from mass in kilograms and height in metres.
+
+                      The BMI may be determined using a table or chart which displays BMI as a function of mass and height using contour lines or colours for different BMI categories, and which may use other units of measurement (converted to metric units for the calculation).
+                      
+                      
+                    </p>
+
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+        <!-- footer start -->
+
+
+        <section id="footer">
+        
+            <div class="container">
+            <div class="row py-auto px-auto my-auto">
+              <div class="col-lg-3 col-md-3 col-6 my-3">
+                <ul>
+                  <p>Terms of use</p>
+                  <p>Privacy & policy</p>
+                  <p>feedback</p>
+                  <p>Report and issue</p>
+                </ul>
+              </div> 
+              <div class="col-lg-3 col-md-3 col-6 my-3">
+                <ul>
+                  <p>Terms of use</p>
+                  <p>Privacy & policy</p>
+                  <p>feedback</p>
+                  <p>Report and issue</p>
+                </ul>
+              </div> 
+              <div class="col-lg-6 col-md-6 col-12 my-3">
+                <p>
+                  healthMeater is part of the Chatterjee's Group . 2021 © Chatterjee's LLC. All rights reserved . The material in this site is intended to be of general informational use.
+                </p>
+               
+              </div>
+            
+  
+            </div>
+            <div class="copyright">
+              <hr class='w-100 text-center' />
+              <p class="text-center" >2021 © Chatterjee's LLC</p>
+  
+            </div>
+          </div>
+  
+          </section>
+  
+  
+  
+          <!-- footer end -->
+
+
+
+    
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<script>
+    function getbmi(){
+
+        var weight = document.getElementById("weight").value;
+        var height = document.getElementById("height").value;
+      
+
+        height = height*0.3048;
+        var sum = (weight/(height*height));
+
+         sum = Math.round(sum);
+
+        document.getElementById("show").value = sum;
+
+     
+    }
+
+ 
+
+</script>
+
+</body>
+</html>

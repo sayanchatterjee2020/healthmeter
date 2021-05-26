@@ -1,0 +1,226 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background:linear-gradient(to right , rgb(214, 214, 214) , rgb(214, 214, 214));
+   }
+
+
+
+
+
+   /* -------------navbar start ----------------*/
+.navbar button{
+    size: 0.5rem;
+    border-radius: 5rem;
+    font-size: 1rem;
+    
+}
+.navbar-brand img{
+    width: 3rem;
+    margin-left: 2rem;
+}
+.heading h1{
+    font-weight: bold;
+    color:  rgba(41, 41, 41, 0.795);
+    letter-spacing: 0.2rem;
+    border-left: 0.5rem solid rgb(35, 161, 145);
+    padding-left: 1rem;
+}
+
+
+   /* -------------navbar end ----------------*/
+
+/* ------------main start-------------- */
+
+
+.box{
+    background:linear-gradient(to right , rgb(214, 214, 214) , rgb(214, 214, 214));
+    border-radius: 1.2rem;
+    box-shadow: 1.3rem 1.3rem 2rem rgb(172, 172, 172), -1.3rem -1.3rem 2rem white; 
+}
+
+.box p{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(35, 161, 145);
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    
+}
+.input{
+    margin: 2rem 9rem;
+    display: flex;
+    flex-direction: column;
+}
+.input input{
+    padding: 1rem 5rem;
+    background-color: rgb(214, 214, 214);
+    border-radius: 5rem;
+    outline: none;
+    border: none;
+    font-size: 3rem;
+    margin-top: 2rem;
+    box-shadow: -0.7rem -0.7rem 2rem 0rem rgba(255, 255, 255, 0.7),0.7rem 0.7rem 2rem 0rem rgba(0, 0,0, 0.2)  ; 
+
+}
+.submit{
+    display: flex;
+    justify-content: center;
+
+}
+.submit button{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(35, 161, 145);
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    background:linear-gradient(to right , rgb(214, 214, 214) , rgb(214, 214, 214));
+    margin:2rem;
+    min-width:15rem;
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+    box-shadow: -0.7rem -0.7rem 2rem 0rem rgba(255, 255, 255, 0.7),0.7rem 0.7rem 2rem 0rem rgba(0, 0,0, 0.2)  ;  
+}
+.submit button:hover{
+    box-shadow: inset -0.7rem -0.7rem 2rem 0rem rgba(255, 255, 255, 0.7), inset 0.7rem 0.7rem 2rem 0rem rgba(0, 0,0, 0.2)  ;
+}
+.output{
+    margin: 2rem 9rem;
+    display: flex;
+    flex-direction: column;
+}
+.output input{
+    padding: 1rem 5rem;
+    background-color: rgb(214, 214, 214);
+    border-radius: 5rem;
+    outline: none;
+    border: none;
+    font-size: 3rem;
+    margin-top: 2rem;
+    box-shadow: -0.7rem -0.7rem 2rem 0rem rgba(255, 255, 255, 0.7),0.7rem 0.7rem 2rem 0rem rgba(0, 0,0, 0.2)  ; 
+
+}
+
+.screen{
+    display: flex;
+    justify-content: center;
+}
+.screen h2{
+    text-transform: capitalize;
+    color: rgba(41, 41, 41, 0.795);
+    letter-spacing: 0.2rem;
+}
+
+/* ------------main end-------------- */
+
+
+
+
+/* ---------------- lekha start------------------- */
+
+#lekha{
+    padding: 6.2rem 0rem;
+    color: rgba(41, 41, 41, 0.795);
+}
+#lekha .col-8{
+    padding-left: 2rem;
+   
+    border-left: 1rem solid rgb(35, 161, 145);
+    
+}
+#lekha .col-8 h1{
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#lekha .col-8 p{
+    font-size: 1.5rem;
+}
+
+/* ---------------- lekha end------------------- */
+
+
+
+
+
+
+/*------------------ footer start ------------------*/
+#footer{
+    background:rgba(41, 41, 41, 0.795);
+    color: rgb(214, 214, 214);
+}
+
+.copyright p{
+    margin-bottom: 0;
+
+}
+
+
+/*-------------------- footer end -----------------------*/
+
+
+@media(max-width:764px){
+
+    /* ---------------- lekha start----------------- */
+
+    #lekha{
+        margin-left: 2rem;
+    }
+    #lekha .col-8{
+        border-left:none;
+    }
+    #lekha .col-8 h1{
+        font-size: 4.5rem;
+       
+    }
+    #lekha .col-8 p{
+        font-size: 1.7rem;
+    }
+     /* ----------- lekha end----------- */
+
+     /* ------------- main start ------------- */
+     .input{
+        margin: 2rem 0rem;
+       
+    }
+    .output{
+        margin: 2rem 0rem;
+       
+    }
+   
+      /* ------------- main end ------------- */
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
